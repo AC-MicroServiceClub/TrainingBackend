@@ -14,6 +14,10 @@
 	</properties>
 	<dependencies>
 		<dependency>
+			<groupId>com.msclub.base</groupId>
+			<artifactId>msclub-exception-starter</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<scope>test</scope>

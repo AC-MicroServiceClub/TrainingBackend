@@ -9,6 +9,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import com.msclub.base.exception.BaseException;
+
 @RestControllerAdvice
 public class CustomerExceptionHandler {
 
@@ -18,7 +20,11 @@ public class CustomerExceptionHandler {
 	public ResponseEntity<String> handleThrowable(Throwable throwable) {
 		logger.error("error occured!", throwable);
 		String response = MessageFormat.format("{\"description\":\"{0}\"}", throwable.getMessage());
-		ResponseEntity<String> responseEntity = new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
+		HttpStatus status = HttpStatus.INTERNAL_SERVER_ERROR;
+		if (throwable instanceof BaseException) {
+			status = ((BaseException) throwable).getHttpStatus();
+		}
+		ResponseEntity<String> responseEntity = new ResponseEntity<>(response, status);
 		return responseEntity;
 	}
 }

@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS Training (
+  ID int NOT NULL
+);
+  
