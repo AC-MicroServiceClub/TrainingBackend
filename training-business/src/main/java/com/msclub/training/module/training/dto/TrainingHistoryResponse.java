@@ -4,14 +4,15 @@ import java.util.List;
 
 public class TrainingHistoryResponse {
 
-	private List<TrainingHistory> trainingHistories;
+	private List<TrainingHistoryDetail> trainingHistoryDetails;
 
-	public List<TrainingHistory> getTrainingHistories() {
-		return trainingHistories;
+	public List<TrainingHistoryDetail> getTrainingHistoryDetails() {
+		return trainingHistoryDetails;
 	}
 
-	public void setTrainingHistories(List<TrainingHistory> trainingHistories) {
-		this.trainingHistories = trainingHistories;
+	public void setTrainingHistoryDetails(List<TrainingHistoryDetail> trainingHistoryDetails) {
+		this.trainingHistoryDetails = trainingHistoryDetails;
 	}
+
 
 }

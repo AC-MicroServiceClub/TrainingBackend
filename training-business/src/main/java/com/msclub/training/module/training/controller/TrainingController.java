@@ -42,5 +42,5 @@ public class TrainingController {
 		response.setDeletedById(training.getDeletedById());
 		return response;
 	}
-	
+
 }

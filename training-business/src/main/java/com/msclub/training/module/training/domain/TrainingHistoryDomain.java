@@ -5,8 +5,8 @@ import java.util.List;
 import com.msclub.training.module.training.dto.Training;
 import com.msclub.training.module.training.dto.TrainingHistory;
 
-public interface TrainingDomain {
+public interface TrainingHistoryDomain {
 
-	public Training getTrainingById(Integer id);
+	public List<TrainingHistory> getTrainingsByTraineeId(String id) ;
 	
 }

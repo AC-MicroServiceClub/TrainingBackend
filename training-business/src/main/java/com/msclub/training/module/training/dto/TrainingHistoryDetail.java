@@ -2,16 +2,8 @@ package com.msclub.training.module.training.dto;
 
 import java.sql.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+public class TrainingHistoryDetail {
 
-
-@Entity(name = "TrainingHistory")
-public class TrainingHistory {
-	
-	private static final long serialVersionUID = 1L;
-	
-	@Id
 	private Integer id;
 	private Integer trainingId;
 	private Integer trainingStateInd;
@@ -199,5 +191,5 @@ public class TrainingHistory {
 	public void setDeletedById(Integer deletedById) {
 		this.deletedById = deletedById;
 	}
-	
+
 }
