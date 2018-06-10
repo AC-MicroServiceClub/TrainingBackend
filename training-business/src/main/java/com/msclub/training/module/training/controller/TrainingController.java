@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,7 +23,7 @@ public class TrainingController {
 	private TrainingService trainingService;
 
 	@PostMapping("/list")
-	public List<Training> getTrainingListByIds(TrainingRequest request) {
+	public List<Training> getTrainingListByIds(@RequestBody TrainingRequest request) {
 		if (CollectionUtils.isEmpty(request.getIds())) {
 			throw new ParameterException(TrainingExceptionCode.ERROR_010003);
 		}
