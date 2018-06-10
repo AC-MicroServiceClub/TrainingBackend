@@ -1,7 +1,5 @@
 package com.msclub.training.module.training.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,8 +13,8 @@ public class TrainingServiceImpl implements TrainingService {
 	private TrainingDomain trainingDomain;
 
 	@Override
-	public List<Training> getTrainingListByIds(List<Integer> ids) {
-		return trainingDomain.getTrainingListByIds(ids);
+	public Training getTrainingById(Integer id) {
+		return trainingDomain.getTrainingById(id);
 	}
 
 }

@@ -6,6 +6,7 @@ import com.msclub.training.module.training.dto.Training;
 
 public interface TrainingDomain {
 
-	public List<Training> getTrainingListByIds(List<Integer> ids);
+	public Training getTrainingById(Integer id);
 	
+	public List<Training> getTrainingsByTraineeId(Integer traineeId);
 }
