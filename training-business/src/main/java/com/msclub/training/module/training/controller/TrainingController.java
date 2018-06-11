@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.msclub.training.module.training.dto.Training;
-import com.msclub.training.module.training.dto.TrainingDetailRequest;
-import com.msclub.training.module.training.dto.TrainingDetailResponse;
+import com.msclub.training.module.training.model.TrainingDetailRequest;
+import com.msclub.training.module.training.model.TrainingDetailResponse;
 import com.msclub.training.module.training.service.TrainingService;
 
 @RestController
@@ -32,6 +32,8 @@ public class TrainingController {
 		response.setTrainingLocation(training.getTrainingLocation());
 		response.setTrainingDescription(training.getTrainingDescription());
 		response.setTrainer(training.getTrainer());
+		response.setTrainingMaterial(training.getTrainingMaterial());
+		response.setTrainingVideo(training.getTrainingVideo());
 		response.setCreator(training.getCreator());
 		response.setCreateDate(training.getCreateDate());
 		response.setUpdatedById(training.getUpdatedById());

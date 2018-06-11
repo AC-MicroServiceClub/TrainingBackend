@@ -16,9 +16,9 @@ public class TrainingHistoryDomainImpl implements TrainingHistoryDomain{
 	private TrainingHistoryResposity trainingHistoryResposity;
 	
 	@Override
-	public List<TrainingHistory> getTrainingsByTraineeId(String id) {
+	public List<TrainingHistory> getTrainingsByTraineeId(String traineeId) {
 		try {
-			List<TrainingHistory> trainingHistorys = trainingHistoryResposity.findByTraineeId(id);
+			List<TrainingHistory> trainingHistorys = trainingHistoryResposity.findByTraineeId(traineeId);
 			if (CollectionUtils.isEmpty(trainingHistorys)) {
 				throw new DataNotFoundException(TrainingExceptionCode.ERROR_010001);
 			}

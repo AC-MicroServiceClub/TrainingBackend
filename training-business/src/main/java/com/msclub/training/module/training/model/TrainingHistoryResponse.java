@@ -1,4 +1,4 @@
-package com.msclub.training.module.training.dto;
+package com.msclub.training.module.training.model;
 
 import java.util.List;
 

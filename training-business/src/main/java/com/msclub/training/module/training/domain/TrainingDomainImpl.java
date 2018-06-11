@@ -1,17 +1,11 @@
 package com.msclub.training.module.training.domain;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.CollectionUtils;
 
-import com.msclub.base.exception.DataNotFoundException;
 import com.msclub.base.exception.TechnicalFailureException;
 import com.msclub.training.module.training.dto.Training;
-import com.msclub.training.module.training.dto.TrainingHistory;
 import com.msclub.training.module.training.exception.TrainingExceptionCode;
-import com.msclub.training.module.training.repository.TrainingHistoryResposity;
 import com.msclub.training.module.training.repository.TrainingRepository;
 
 @Service

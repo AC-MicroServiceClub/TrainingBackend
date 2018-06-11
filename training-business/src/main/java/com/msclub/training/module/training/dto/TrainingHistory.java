@@ -1,5 +1,6 @@
 package com.msclub.training.module.training.dto;
 
+import java.io.Serializable;
 import java.sql.Date;
 
 import javax.persistence.Entity;
@@ -7,7 +8,7 @@ import javax.persistence.Id;
 
 
 @Entity(name = "TrainingHistory")
-public class TrainingHistory {
+public class TrainingHistory implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	

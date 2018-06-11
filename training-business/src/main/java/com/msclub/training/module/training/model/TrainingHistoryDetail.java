@@ -1,27 +1,35 @@
-package com.msclub.training.module.training.dto;
+package com.msclub.training.module.training.model;
 
 import java.sql.Date;
 
-public class TrainingDetailResponse {
+public class TrainingHistoryDetail {
 
 	private Integer id;
-	private Integer trainingPlanId;
+	private Integer trainingId;
 	private Integer trainingStateInd;
 	private String trainingTitle;
+	private String trainer;
 	private Date trainingStartTime;
 	private Date trainingEndTime;
-	private Integer trainingDuration;
-	private String trainingLocation;
-	private String trainingDescription;
-	private String trainer;
+	private Integer duration;
+	private String location;
+	private String traineeId;
+	private String traineeStateInd;
 	private Integer creatorId;
 	private String creator;
+
 	private Date createDate;
+
 	private Integer updatedById;
+
 	private String updatedBy;
+
 	private Date lastUpdateDate;
+
 	private Integer deletedInd;
+
 	private String deletedBy;
+
 	private Integer deletedById;
 
 	public Integer getId() {
@@ -32,12 +40,12 @@ public class TrainingDetailResponse {
 		this.id = id;
 	}
 
-	public Integer getTrainingPlanId() {
-		return trainingPlanId;
+	public Integer getTrainingId() {
+		return trainingId;
 	}
 
-	public void setTrainingPlanId(Integer trainingPlanId) {
-		this.trainingPlanId = trainingPlanId;
+	public void setTrainingId(Integer trainingId) {
+		this.trainingId = trainingId;
 	}
 
 	public Integer getTrainingStateInd() {
@@ -56,6 +64,14 @@ public class TrainingDetailResponse {
 		this.trainingTitle = trainingTitle;
 	}
 
+	public String getTrainer() {
+		return trainer;
+	}
+
+	public void setTrainer(String trainer) {
+		this.trainer = trainer;
+	}
+
 	public Date getTrainingStartTime() {
 		return trainingStartTime;
 	}
@@ -72,36 +88,36 @@ public class TrainingDetailResponse {
 		this.trainingEndTime = trainingEndTime;
 	}
 
-	public Integer getTrainingDuration() {
-		return trainingDuration;
+	public Integer getDuration() {
+		return duration;
 	}
 
-	public void setTrainingDuration(Integer trainingDuration) {
-		this.trainingDuration = trainingDuration;
+	public void setDuration(Integer duration) {
+		this.duration = duration;
 	}
 
-	public String getTrainingLocation() {
-		return trainingLocation;
+	public String getLocation() {
+		return location;
 	}
 
-	public void setTrainingLocation(String trainingLocation) {
-		this.trainingLocation = trainingLocation;
+	public void setLocation(String location) {
+		this.location = location;
 	}
 
-	public String getTrainingDescription() {
-		return trainingDescription;
+	public String getTraineeId() {
+		return traineeId;
 	}
 
-	public void setTrainingDescription(String trainingDescription) {
-		this.trainingDescription = trainingDescription;
+	public void setTraineeId(String traineeId) {
+		this.traineeId = traineeId;
 	}
 
-	public String getTrainer() {
-		return trainer;
+	public String getTraineeStateInd() {
+		return traineeStateInd;
 	}
 
-	public void setTrainer(String trainer) {
-		this.trainer = trainer;
+	public void setTraineeStateInd(String traineeStateInd) {
+		this.traineeStateInd = traineeStateInd;
 	}
 
 	public Integer getCreatorId() {

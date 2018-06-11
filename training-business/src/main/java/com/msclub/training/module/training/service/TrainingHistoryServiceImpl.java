@@ -15,8 +15,8 @@ public class TrainingHistoryServiceImpl implements TrainingHistoryService {
 	private TrainingHistoryDomain trainingHistoryDomain;
 
 	@Override
-	public List<TrainingHistory> getTrainingHistorysByTraineeId(String id) {
-		return trainingHistoryDomain.getTrainingsByTraineeId(id);
+	public List<TrainingHistory> getTrainingHistorysByTraineeId(String traineeId) {
+		return trainingHistoryDomain.getTrainingsByTraineeId(traineeId);
 	}
 
 }

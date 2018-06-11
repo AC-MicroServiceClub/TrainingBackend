@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.msclub.training.module.training.dto.TrainingHistory;
-import com.msclub.training.module.training.dto.TrainingHistoryDetail;
-import com.msclub.training.module.training.dto.TrainingHistoryRequest;
-import com.msclub.training.module.training.dto.TrainingHistoryResponse;
+import com.msclub.training.module.training.model.TrainingHistoryDetail;
+import com.msclub.training.module.training.model.TrainingHistoryRequest;
+import com.msclub.training.module.training.model.TrainingHistoryResponse;
 import com.msclub.training.module.training.service.TrainingHistoryService;
 
 @RestController
@@ -24,8 +24,9 @@ public class TrainingHistoryController {
 
 	@PostMapping("/history")
 	public TrainingHistoryResponse getTrainingHistorys(@RequestBody TrainingHistoryRequest request) {
+
 		List<TrainingHistory> trainingHistorys = trainingHistoryService
-				.getTrainingHistorysByTraineeId(String.valueOf(request.getTraineeId()));
+				.getTrainingHistorysByTraineeId(request.getTraineeId());
 		TrainingHistoryResponse response = new TrainingHistoryResponse();
 		List<TrainingHistoryDetail> trainingHistoryDetails = new ArrayList<TrainingHistoryDetail>();
 		for (TrainingHistory trainingHistory : trainingHistorys) {

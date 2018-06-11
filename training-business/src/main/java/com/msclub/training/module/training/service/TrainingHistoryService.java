@@ -6,5 +6,6 @@ import com.msclub.training.module.training.dto.TrainingHistory;
 
 public interface TrainingHistoryService {
 
-	public List<TrainingHistory> getTrainingHistorysByTraineeId(String id);
+	public List<TrainingHistory> getTrainingHistorysByTraineeId(String traineeId);
+	
 }

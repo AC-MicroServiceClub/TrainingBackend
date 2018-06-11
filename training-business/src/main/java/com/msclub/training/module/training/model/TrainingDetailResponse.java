@@ -1,35 +1,29 @@
-package com.msclub.training.module.training.dto;
+package com.msclub.training.module.training.model;
 
 import java.sql.Date;
 
-public class TrainingHistoryDetail {
+public class TrainingDetailResponse {
 
 	private Integer id;
-	private Integer trainingId;
+	private Integer trainingPlanId;
 	private Integer trainingStateInd;
 	private String trainingTitle;
-	private String trainer;
 	private Date trainingStartTime;
 	private Date trainingEndTime;
-	private Integer duration;
-	private String location;
-	private String traineeId;
-	private String traineeStateInd;
+	private Integer trainingDuration;
+	private String trainingLocation;
+	private String trainingDescription;
+	private String trainer;
+	private String trainingMaterial;
+	private String trainingVideo;
 	private Integer creatorId;
 	private String creator;
-
 	private Date createDate;
-
 	private Integer updatedById;
-
 	private String updatedBy;
-
 	private Date lastUpdateDate;
-
 	private Integer deletedInd;
-
 	private String deletedBy;
-
 	private Integer deletedById;
 
 	public Integer getId() {
@@ -40,12 +34,12 @@ public class TrainingHistoryDetail {
 		this.id = id;
 	}
 
-	public Integer getTrainingId() {
-		return trainingId;
+	public Integer getTrainingPlanId() {
+		return trainingPlanId;
 	}
 
-	public void setTrainingId(Integer trainingId) {
-		this.trainingId = trainingId;
+	public void setTrainingPlanId(Integer trainingPlanId) {
+		this.trainingPlanId = trainingPlanId;
 	}
 
 	public Integer getTrainingStateInd() {
@@ -64,14 +58,6 @@ public class TrainingHistoryDetail {
 		this.trainingTitle = trainingTitle;
 	}
 
-	public String getTrainer() {
-		return trainer;
-	}
-
-	public void setTrainer(String trainer) {
-		this.trainer = trainer;
-	}
-
 	public Date getTrainingStartTime() {
 		return trainingStartTime;
 	}
@@ -88,36 +74,36 @@ public class TrainingHistoryDetail {
 		this.trainingEndTime = trainingEndTime;
 	}
 
-	public Integer getDuration() {
-		return duration;
+	public Integer getTrainingDuration() {
+		return trainingDuration;
 	}
 
-	public void setDuration(Integer duration) {
-		this.duration = duration;
+	public void setTrainingDuration(Integer trainingDuration) {
+		this.trainingDuration = trainingDuration;
 	}
 
-	public String getLocation() {
-		return location;
+	public String getTrainingLocation() {
+		return trainingLocation;
 	}
 
-	public void setLocation(String location) {
-		this.location = location;
+	public void setTrainingLocation(String trainingLocation) {
+		this.trainingLocation = trainingLocation;
 	}
 
-	public String getTraineeId() {
-		return traineeId;
+	public String getTrainingDescription() {
+		return trainingDescription;
 	}
 
-	public void setTraineeId(String traineeId) {
-		this.traineeId = traineeId;
+	public void setTrainingDescription(String trainingDescription) {
+		this.trainingDescription = trainingDescription;
 	}
 
-	public String getTraineeStateInd() {
-		return traineeStateInd;
+	public String getTrainer() {
+		return trainer;
 	}
 
-	public void setTraineeStateInd(String traineeStateInd) {
-		this.traineeStateInd = traineeStateInd;
+	public void setTrainer(String trainer) {
+		this.trainer = trainer;
 	}
 
 	public Integer getCreatorId() {
@@ -192,4 +178,21 @@ public class TrainingHistoryDetail {
 		this.deletedById = deletedById;
 	}
 
+	public String getTrainingMaterial() {
+		return trainingMaterial;
+	}
+
+	public void setTrainingMaterial(String trainingMaterial) {
+		this.trainingMaterial = trainingMaterial;
+	}
+
+	public String getTrainingVideo() {
+		return trainingVideo;
+	}
+
+	public void setTrainingVideo(String trainingVideo) {
+		this.trainingVideo = trainingVideo;
+	}
+
+	
 }

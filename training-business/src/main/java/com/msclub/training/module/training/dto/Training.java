@@ -45,6 +45,10 @@ public class Training implements Serializable {
 	// trainer1_ID:trainer_name|trainer2_ID:trainer_name',
 	// @Column(name = "Trainier")
 	private String trainer;
+	// `TRAINING_MATERIAL` TEXT NOT NULL,
+	private String trainingMaterial;
+	// `TRAINING_VIDEO` TEXT NOT NULL,
+	private String trainingVideo;
 	// `CREATOR_ID` int NOT NULL DEFAULT 0,
 	// @Column(name = "CREATOR_ID")
 	private Integer creatorId;
@@ -225,4 +229,19 @@ public class Training implements Serializable {
 		this.deletedById = deletedById;
 	}
 
+	public String getTrainingMaterial() {
+		return trainingMaterial;
+	}
+
+	public void setTrainingMaterial(String trainingMaterial) {
+		this.trainingMaterial = trainingMaterial;
+	}
+
+	public String getTrainingVideo() {
+		return trainingVideo;
+	}
+
+	public void setTrainingVideo(String trainingVideo) {
+		this.trainingVideo = trainingVideo;
+	}
 }
