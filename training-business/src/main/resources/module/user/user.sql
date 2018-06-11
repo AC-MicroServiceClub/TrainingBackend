@@ -1,8 +1,8 @@
-------------------------------------
-------------------------------------
------trainer
-------------------------------------
-------------------------------------
+-- ----------------------------------
+-- ----------------------------------
+-- ---trainer
+-- ----------------------------------
+-- ----------------------------------
 CREATE TABLE `MicroServiceDev`.`trainer` (
   `ID` INT (11) NOT NULL,
   `USER_ID` INT (11) NOT NULL COMMENT 'USER.ID',
@@ -21,7 +21,7 @@ CREATE TABLE `MicroServiceDev`.`trainer` (
   `DELETED_BY` VARCHAR (45) NOT NULL DEFAULT '',
   `DELETED_BY_ID` INT (11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ID`)
-) ENGINE = INNODB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ;
+) ENGINE = INNODB DEFAULT CHARSET = utf8;
 
 INSERT INTO `microservicedev`.`trainer` (
   `ID`,
@@ -47,11 +47,11 @@ VALUES
     'fangzhou.li'
   ) ;
 
-------------------------------------
-------------------------------------
------user
-------------------------------------
-------------------------------------
+-- ----------------------------------
+-- ----------------------------------
+-- ---user
+-- ----------------------------------
+-- ----------------------------------
 CREATE TABLE `MicroServiceDev`.`user` (
   `ID` INT (11) NOT NULL,
   `EID` VARCHAR (50) NOT NULL,
@@ -69,7 +69,7 @@ CREATE TABLE `MicroServiceDev`.`user` (
   `DELETED_BY` VARCHAR (45) NOT NULL DEFAULT '',
   `DELETED_BY_ID` INT (11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ID`)
-) ENGINE = INNODB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ;
+) ENGINE = INNODB DEFAULT CHARSET = utf8;
 
 INSERT INTO `microservicedev`.`user` (
   `ID`,

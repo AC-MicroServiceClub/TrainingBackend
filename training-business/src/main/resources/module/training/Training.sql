@@ -1,8 +1,8 @@
-------------------------------------
-------------------------------------
------Training
-------------------------------------
-------------------------------------
+-- ----------------------------------
+-- ----------------------------------
+-- ---Training
+-- ----------------------------------
+-- ----------------------------------
 CREATE TABLE `MicroServiceDev`.`training` (
   `ID` INT (11) NOT NULL,
   `TRAINING_PLAN_ID` INT (11) NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE `MicroServiceDev`.`training` (
   `DELETED_BY` VARCHAR (45) NOT NULL DEFAULT '',
   `DELETED_BY_ID` INT (11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ID`)
-) ENGINE = INNODB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ;
+) ENGINE = INNODB DEFAULT CHARSET = utf8;
 
 INSERT INTO `MICROSERVICEDEV`.`TRAINING` (
   `ID`,
@@ -76,11 +76,11 @@ VALUES
     0
   ) ;
 
-------------------------------------
-------------------------------------
------Training-History
-------------------------------------
-------------------------------------
+-- ----------------------------------
+-- ----------------------------------
+-- ---Training-History
+-- ----------------------------------
+-- ----------------------------------
 CREATE TABLE `MicroServiceDev`.`training_history` (
   `ID` INT (11) NOT NULL,
   `TRAINING_ID` INT (11) NOT NULL DEFAULT '0' COMMENT 'training.ID',
@@ -139,66 +139,71 @@ VALUES
     CURRENT_TIMESTAMP
   ) ;
 
-
-INSERT INTO `microservicedev`.`training_history`
-(`ID`,
-`TRAINING_ID`,
-`TRAINING_STATE_IND`,
-`TRAINING_TITLE`,
-`TRAINIER`,
-`TRAINING_START_TIME`,
-`TRAINING_END_TIME`,
-`TRAINING_DURATION`,
-`TRAINING_LOCATION`,
-`TRAINEE_ID`,
-`TRAINEE_STATE_IND`,
-`CREATOR_ID`,
-`CREATOR`,
-`CREATE_DATE`)
+INSERT INTO `microservicedev`.`training_history` (
+  `ID`,
+  `TRAINING_ID`,
+  `TRAINING_STATE_IND`,
+  `TRAINING_TITLE`,
+  `TRAINIER`,
+  `TRAINING_START_TIME`,
+  `TRAINING_END_TIME`,
+  `TRAINING_DURATION`,
+  `TRAINING_LOCATION`,
+  `TRAINEE_ID`,
+  `TRAINEE_STATE_IND`,
+  `CREATOR_ID`,
+  `CREATOR`,
+  `CREATE_DATE`
+) 
 VALUES
-(2,
-1000002,
-0,
-'course 2',
-'1:xiaohui.c.liu',
-'2018-06-10 13:00:00',
-'2018-06-10 15:00:00',
-180,
-'24#9M001',
-5000001,
-0,
-2,
-'fangzhou.li',
-CURRENT_TIMESTAMP);
+  (
+    2,
+    1000002,
+    0,
+    'course 2',
+    '1:xiaohui.c.liu',
+    '2018-06-10 13:00:00',
+    '2018-06-10 15:00:00',
+    180,
+    '24#9M001',
+    5000001,
+    0,
+    2,
+    'fangzhou.li',
+    CURRENT_TIMESTAMP
+  ) ;
 
-
-INSERT INTO `microservicedev`.`training_history`
-(`ID`,
-`TRAINING_ID`,
-`TRAINING_STATE_IND`,
-`TRAINING_TITLE`,
-`TRAINIER`,
-`TRAINING_START_TIME`,
-`TRAINING_END_TIME`,
-`TRAINING_DURATION`,
-`TRAINING_LOCATION`,
-`TRAINEE_ID`,
-`TRAINEE_STATE_IND`,
-`CREATOR_ID`,
-`CREATOR`,
-`CREATE_DATE`)
+INSERT INTO `microservicedev`.`training_history` (
+  `ID`,
+  `TRAINING_ID`,
+  `TRAINING_STATE_IND`,
+  `TRAINING_TITLE`,
+  `TRAINIER`,
+  `TRAINING_START_TIME`,
+  `TRAINING_END_TIME`,
+  `TRAINING_DURATION`,
+  `TRAINING_LOCATION`,
+  `TRAINEE_ID`,
+  `TRAINEE_STATE_IND`,
+  `CREATOR_ID`,
+  `CREATOR`,
+  `CREATE_DATE`
+) 
 VALUES
-(3,
-1000003,
-0,
-'course 3',
-'1:xiaohui.c.liu',
-'2018-06-11 9:00:00',
-'2018-06-11 12:00:00',
-180,
-'24#9M001',
-5000001,
-0,
-2,
-'fangzhou.li',
-CURRENT_TIMESTAMP);
+  (
+    3,
+    1000003,
+    0,
+    'course 3',
+    '1:xiaohui.c.liu',
+    '2018-06-11 9:00:00',
+    '2018-06-11 12:00:00',
+    180,
+    '24#9M001',
+    5000001,
+    0,
+    2,
+    'fangzhou.li',
+    CURRENT_TIMESTAMP
+  ) ;
+
