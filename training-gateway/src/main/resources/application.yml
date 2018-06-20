@@ -1,0 +1,11 @@
+server:
+  port: 8080
+  
+zuul:
+  routes:
+    training:
+      path: /training/**
+      url: http://localhost:8081/training
+    user: 
+      path: /user/**
+      url: http://localhost:8081/user 

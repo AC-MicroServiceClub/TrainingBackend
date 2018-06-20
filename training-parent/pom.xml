@@ -15,4 +15,23 @@
 		<artifactId>msclub-starter-parent</artifactId>
 		<version>0.0.1</version>
 	</parent>
+	
+	<properties>
+		<training-web-stater.version>0.0.1-SNAPSHOT</training-web-stater.version>
+		<training-starter-parent.version>0.0.1-SNAPSHOT</training-starter-parent.version>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.msclub.training</groupId>
+				<artifactId>training-web-stater</artifactId>
+				<version>${training-web-stater.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.msclub.training</groupId>
+				<artifactId>training-starter-parent</artifactId>
+				<version>${training-starter-parent.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>
