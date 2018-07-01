@@ -1,4 +1,4 @@
-package com.msclub.training.module.training.domain;
+package com.msclub.training.domain;
 
 import java.util.List;
 
@@ -8,9 +8,9 @@ import org.springframework.util.CollectionUtils;
 
 import com.msclub.base.exception.DataNotFoundException;
 import com.msclub.base.exception.TechnicalFailureException;
-import com.msclub.training.module.training.dto.TrainingHistory;
-import com.msclub.training.module.training.exception.TrainingExceptionCode;
-import com.msclub.training.module.training.repository.TrainingHistoryResposity;
+import com.msclub.training.dto.TrainingHistory;
+import com.msclub.training.exception.TrainingExceptionCode;
+import com.msclub.training.repository.TrainingHistoryResposity;
 
 @Service
 public class TrainingHistoryDomainImpl implements TrainingHistoryDomain{

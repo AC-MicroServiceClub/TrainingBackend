@@ -1,4 +1,4 @@
-package com.msclub.training.module.training.exception;
+package com.msclub.training.exception;
 
 import org.springframework.http.HttpStatus;
 

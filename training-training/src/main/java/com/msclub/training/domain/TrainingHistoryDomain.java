@@ -1,8 +1,8 @@
-package com.msclub.training.module.training.domain;
+package com.msclub.training.domain;
 
 import java.util.List;
 
-import com.msclub.training.module.training.dto.TrainingHistory;
+import com.msclub.training.dto.TrainingHistory;
 
 public interface TrainingHistoryDomain {
 

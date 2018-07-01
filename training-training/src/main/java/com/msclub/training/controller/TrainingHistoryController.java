@@ -1,4 +1,4 @@
-package com.msclub.training.module.training.controller;
+package com.msclub.training.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.msclub.training.module.training.dto.TrainingHistory;
-import com.msclub.training.module.training.model.TrainingHistoryDetail;
-import com.msclub.training.module.training.model.TrainingHistoryRequest;
-import com.msclub.training.module.training.model.TrainingHistoryResponse;
-import com.msclub.training.module.training.service.TrainingHistoryService;
+import com.msclub.training.dto.TrainingHistory;
+import com.msclub.training.model.TrainingHistoryDetail;
+import com.msclub.training.model.TrainingHistoryRequest;
+import com.msclub.training.model.TrainingHistoryResponse;
+import com.msclub.training.service.TrainingHistoryService;
 
 @RestController
 @RequestMapping("/training")

@@ -1,4 +1,4 @@
-package com.msclub.training.module.training.dto;
+package com.msclub.training.dto;
 
 import java.io.Serializable;
 import java.sql.Date;

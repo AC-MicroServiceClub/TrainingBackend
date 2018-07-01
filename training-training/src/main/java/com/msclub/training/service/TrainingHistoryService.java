@@ -1,8 +1,8 @@
-package com.msclub.training.module.training.service;
+package com.msclub.training.service;
 
 import java.util.List;
 
-import com.msclub.training.module.training.dto.TrainingHistory;
+import com.msclub.training.dto.TrainingHistory;
 
 public interface TrainingHistoryService {
 
