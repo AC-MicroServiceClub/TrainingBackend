@@ -1,4 +1,4 @@
-package com.msclub.training.module.training.controller;
+package com.msclub.training.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.msclub.training.module.training.dto.Training;
-import com.msclub.training.module.training.model.TrainingDetailRequest;
-import com.msclub.training.module.training.model.TrainingDetailResponse;
-import com.msclub.training.module.training.service.TrainingService;
+import com.msclub.training.dto.Training;
+import com.msclub.training.model.TrainingDetailRequest;
+import com.msclub.training.model.TrainingDetailResponse;
+import com.msclub.training.service.TrainingService;
 
 @RestController
 @RequestMapping("/training")

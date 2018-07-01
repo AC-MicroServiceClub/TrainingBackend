@@ -1,12 +1,12 @@
-package com.msclub.training.module.training.domain;
+package com.msclub.training.domain;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.msclub.base.exception.TechnicalFailureException;
-import com.msclub.training.module.training.dto.Training;
-import com.msclub.training.module.training.exception.TrainingExceptionCode;
-import com.msclub.training.module.training.repository.TrainingRepository;
+import com.msclub.training.dto.Training;
+import com.msclub.training.exception.TrainingExceptionCode;
+import com.msclub.training.repository.TrainingRepository;
 
 @Service
 public class TrainingDomainImpl implements TrainingDomain {

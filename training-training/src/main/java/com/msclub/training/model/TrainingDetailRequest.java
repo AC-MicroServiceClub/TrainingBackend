@@ -1,4 +1,4 @@
-package com.msclub.training.module.training.model;
+package com.msclub.training.model;
 
 public class TrainingDetailRequest {
 
