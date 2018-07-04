@@ -8,4 +8,11 @@ zuul:
       url: http://localhost:8081/training
     user: 
       path: /user/**
-      url: http://localhost:8081/user 
+      url: http://localhost:8082/user
+    common: 
+      path: /common/**
+      url: http://localhost:8082/user
+      
+login: 
+  failed:
+    redirect: /user/login  
