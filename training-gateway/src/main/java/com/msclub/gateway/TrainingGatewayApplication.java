@@ -3,6 +3,8 @@ package com.msclub.gateway;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang.StringUtils;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
@@ -15,6 +17,9 @@ import com.msclub.gateway.filter.BusinessFilter;
 @EnableZuulProxy
 public class TrainingGatewayApplication {
 
+	@Value("${token.validation-path}")
+	private String validationPaths;
+
 	public static void main(String[] args) {
 		SpringApplication.run(TrainingGatewayApplication.class, args);
 	}
@@ -25,8 +30,13 @@ public class TrainingGatewayApplication {
 		filterRegistrationBean.setFilter(businessFilter);
 
 		List<String> urlPatterns = new ArrayList<>();
-		urlPatterns.add("/training/*");
-		urlPatterns.add("/common/*");
+		if (StringUtils.isNotBlank(validationPaths)) {
+			for (String item : validationPaths.split(";")) {
+				if (StringUtils.isNotBlank(item.trim())) {
+					urlPatterns.add(item.trim());
+				}
+			}
+		}
 		filterRegistrationBean.setUrlPatterns(urlPatterns);
 		return filterRegistrationBean;
 	}
