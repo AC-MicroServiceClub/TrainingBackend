@@ -17,11 +17,11 @@ public class TrainingHistory implements Serializable {
 	private Integer trainingId;
 	private Integer trainingStateInd;
 	private String trainingTitle;
-	private String trainer;
+//	private String trainer;
 	private Date trainingStartTime;
 	private Date trainingEndTime;
-	private Integer duration;
-	private String location;
+//	private Integer duration;
+//	private String location;
 	private String traineeId;
 	private String traineeStateInd;
 	private Integer creatorId;
@@ -73,13 +73,13 @@ public class TrainingHistory implements Serializable {
 		this.trainingTitle = trainingTitle;
 	}
 
-	public String getTrainer() {
-		return trainer;
-	}
-
-	public void setTrainer(String trainer) {
-		this.trainer = trainer;
-	}
+//	public String getTrainer() {
+//		return trainer;
+//	}
+//
+//	public void setTrainer(String trainer) {
+//		this.trainer = trainer;
+//	}
 
 	public Date getTrainingStartTime() {
 		return trainingStartTime;
@@ -97,21 +97,21 @@ public class TrainingHistory implements Serializable {
 		this.trainingEndTime = trainingEndTime;
 	}
 
-	public Integer getDuration() {
-		return duration;
-	}
-
-	public void setDuration(Integer duration) {
-		this.duration = duration;
-	}
-
-	public String getLocation() {
-		return location;
-	}
-
-	public void setLocation(String location) {
-		this.location = location;
-	}
+//	public Integer getDuration() {
+//		return duration;
+//	}
+//
+//	public void setDuration(Integer duration) {
+//		this.duration = duration;
+//	}
+//
+//	public String getLocation() {
+//		return location;
+//	}
+//
+//	public void setLocation(String location) {
+//		this.location = location;
+//	}
 
 	public String getTraineeId() {
 		return traineeId;
