@@ -1,11 +1,16 @@
 server:
   port: 8080
-  
 zuul:
   routes:
     training:
       path: /training/**
       url: http://localhost:8081/training
-    user: 
+    user:
       path: /user/**
-      url: http://localhost:8081/user 
+      url: http://localhost:8082/user
+    common:
+      path: /common/**
+      url: http://localhost:8082/user
+      
+token:
+  validation-path: /training/*; /common/*
