@@ -35,11 +35,11 @@ public class TrainingHistoryController {
 			trainingHistoryDetail.setTrainingId(trainingHistory.getTrainingId());
 			trainingHistoryDetail.setTrainingStateInd(trainingHistory.getTrainingStateInd());
 			trainingHistoryDetail.setTrainingTitle(trainingHistory.getTrainingTitle());
-			trainingHistoryDetail.setTrainer(trainingHistory.getTrainer());
+//			trainingHistoryDetail.setTrainer(trainingHistory.getTrainer());
 			trainingHistoryDetail.setTrainingStartTime(trainingHistory.getTrainingStartTime());
 			trainingHistoryDetail.setTrainingEndTime(trainingHistory.getTrainingEndTime());
-			trainingHistoryDetail.setDuration(trainingHistory.getDuration());
-			trainingHistoryDetail.setLocation(trainingHistory.getLocation());
+//			trainingHistoryDetail.setDuration(trainingHistory.getDuration());
+//			trainingHistoryDetail.setLocation(trainingHistory.getLocation());
 			trainingHistoryDetail.setTraineeId(trainingHistory.getTraineeId());
 			trainingHistoryDetail.setTraineeStateInd(trainingHistory.getTraineeStateInd());
 			trainingHistoryDetail.setCreatorId(trainingHistory.getCreatorId());

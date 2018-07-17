@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
@@ -34,6 +35,9 @@ public class BusinessFilter implements Filter {
 	@Autowired
 	private RestClientUtil restClientUtil;
 
+	@Value("${user.service}")
+	private String userServiceUrl;
+
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
 	}
@@ -52,8 +56,8 @@ public class BusinessFilter implements Filter {
 				TokenRequest tokenRequest = new TokenRequest();
 				tokenRequest.setToken(token);
 				HttpEntity<TokenRequest> requestEntity = new HttpEntity<TokenRequest>(tokenRequest);
-				ResponseEntity<CommonResponse> commonResposneEntity = restClient.getResponse("/user/token",
-						HttpMethod.POST, requestEntity, CommonResponse.class, null);
+				ResponseEntity<CommonResponse> commonResposneEntity = restClient.getResponse(
+						userServiceUrl + "/user/token", HttpMethod.POST, requestEntity, CommonResponse.class, null);
 
 				CommonResponse commonResponse = commonResposneEntity.getBody();
 				if (commonResponse.getStatus()) {
@@ -69,6 +73,7 @@ public class BusinessFilter implements Filter {
 		}
 		PrintWriter out = null;
 		try {
+			response.setCharacterEncoding("UTF-8");
 			out = response.getWriter();
 			out.write(restClientUtil.buildFailedCommonResponseToString("权限验证失败，非法或者过期Token，请重新登录！"));
 		} finally {

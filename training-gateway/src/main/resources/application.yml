@@ -10,7 +10,10 @@ zuul:
       url: http://localhost:8082/user
     common:
       path: /common/**
-      url: http://localhost:8082/user
+      url: http://localhost:8083/user
       
 token:
   validation-path: /training/*; /common/*
+  
+user:
+  service: http://localhost:8082
